@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌표실습</title>
+    <style>
+        .buttonBox{
+            display: flex;
+        }
+
+        .divBox{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+       div1{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border: solid black 1px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="buttonBox">
+            <button class="btn-add" onclick=>박스추가</button>
+            <button class="btn-remove">박스제거</button>
+    </div>
+    <div class="divBox"></div>
+
+    <script>
+        const divbox = document.querySelector('.divBox')
+        const addBtn = document.querySelector(".btn-add")
+        const removeBtn = document.querySelector(".btn-remove")
+
+        
+
+        addBtn.addEventListener("click", addBox)
+        removeBtn.addEventListener("click",removeBox)
+
+        function addBox(){
+            const colorDiv = document.createElement("div1")
+            divbox.appendChild(colorDiv)
+        }
+
+        function removeBox(){
+            divbox.removeChild(div1)
+        }
+    </script>
+</body>
+</html>
